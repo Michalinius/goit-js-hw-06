@@ -15,8 +15,10 @@ const images = [
 
 const list = document.querySelector("ul.gallery");
 
+const array = [];
+
 const gallery = images.forEach((pic) => {
-list.insertAdjacentHTML("afterbegin",`<li>
+array.push(`<li>
  <img src="${pic.url}" alt="${pic.alt}" height="200"/> </li>
 `);});
 
@@ -24,6 +26,7 @@ list.insertAdjacentHTML("afterbegin",`<li>
 list.style.listStyle = "none";
 list.style.display = "flex";
 list.style.justifyContent = "space-around";
+list.insertAdjacentHTML("afterbegin",array.join(""));
 
 
 

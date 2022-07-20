@@ -27,7 +27,7 @@ const destroyBoxes = () => {
 }
 
 //createBoxes(3);
-createButton.addEventListener("click", createBoxes(input.value));
-//destroyButton.addEventListener("click",destroyBoxes());
+createButton.addEventListener("click", () => createBoxes(input.value));
+destroyButton.addEventListener("click",() => destroyBoxes());
 
 
